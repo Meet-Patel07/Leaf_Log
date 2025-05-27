@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-poppins bg-background text-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-secondary focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-primary focus:ring-secondary;
+  }
+  
+  .btn-ghost {
+    @apply btn bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-secondary;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 mb-12 max-w-3xl mx-auto;
+  }
+}
